@@ -1,0 +1,427 @@
+{
+  "id": "a3b7cefe-2345-4c1f-8643-9d7008ba03d8",
+  "fields": [
+    {
+      "id": "e878908b-b151-4121-82d5-9323392920b4",
+      "label": "名称",
+      "type": "text",
+      "required": true,
+      "enableDescription": false,
+      "defaultValue": ""
+    },
+    {
+      "id": "a3b6835d-c830-4393-878c-2b28215c712c",
+      "label": "类别",
+      "type": "property_value_suggestion",
+      "defaultValue": [],
+      "condition": {
+        "id": "556e15d6-2f29-4b48-8782-6d2b45c3a21c",
+        "type": "group",
+        "operator": "and",
+        "conditions": []
+      }
+    },
+    {
+      "id": "6d7f58d2-a5ea-4648-b520-cfd1bf787d07",
+      "label": "tagss",
+      "type": "property_value_suggestion",
+      "options": []
+    },
+    {
+      "id": "3c71512b-e4d8-4e43-a54e-5dfff676f5a5",
+      "label": "状态",
+      "type": "property_value_suggestion",
+      "condition": {
+        "id": "00ecfc09-ca19-4c6a-b9f9-e29e8c0f56ef",
+        "type": "group",
+        "operator": "or",
+        "conditions": [
+          {
+            "id": "bd02b6d2-3087-4c08-88a8-755ea47f48bf",
+            "type": "filter",
+            "property": "a3b6835d-c830-4393-878c-2b28215c712c",
+            "operator": "equals",
+            "value": [
+              "[[电影]]"
+            ]
+          },
+          {
+            "id": "67cdf58c-7164-4595-aa4a-e5df1427fbd9",
+            "type": "filter",
+            "property": "a3b6835d-c830-4393-878c-2b28215c712c",
+            "operator": "equals",
+            "value": [
+              "[[书籍]]"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "afd51c1d-bc6e-40e0-a03b-cff91c4a0016",
+      "label": "评分",
+      "type": "property_value_suggestion",
+      "condition": {
+        "id": "7f4163a5-34ef-4167-ac9a-08f1629413a9",
+        "type": "group",
+        "operator": "or",
+        "conditions": [
+          {
+            "id": "6a8e0a03-cfb3-400f-b449-f3c42da0c2f7",
+            "type": "filter",
+            "property": "a3b6835d-c830-4393-878c-2b28215c712c",
+            "operator": "equals",
+            "value": [
+              "[[电影]]"
+            ]
+          },
+          {
+            "id": "8b5683b8-5889-444c-bdf1-f5b8d8e3079e",
+            "type": "filter",
+            "property": "a3b6835d-c830-4393-878c-2b28215c712c",
+            "operator": "equals",
+            "value": [
+              "[[书籍]]"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "59a2a274-1c97-4ed9-99d8-e40b9306aae5",
+      "label": "年份",
+      "type": "property_value_suggestion",
+      "options": [
+        {
+          "id": "61344e82-1d51-467e-8533-c33c5febb803",
+          "label": "",
+          "value": ""
+        }
+      ],
+      "defaultValue": [
+        "[[{{date:YYYY}}]]"
+      ]
+    },
+    {
+      "id": "0819ea6a-3fe6-445e-8cf6-6e1c7eba0322",
+      "label": "购买渠道",
+      "type": "property_value_suggestion",
+      "propertyName": "购买渠道",
+      "condition": {
+        "id": "808fa523-edb4-41d3-92dc-e7f30f62a80a",
+        "type": "group",
+        "operator": "and",
+        "conditions": [
+          {
+            "id": "6a259a39-26ff-4ed4-ba9a-e742a5c70cd5",
+            "type": "filter",
+            "property": "a3b6835d-c830-4393-878c-2b28215c712c",
+            "operator": "equals",
+            "value": [
+              "[[物品]]"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "eaf48cf0-8449-427a-8cbe-cbb3d78fcdb8",
+      "label": "购买时间",
+      "type": "datetime",
+      "propertyName": "购买时间",
+      "condition": {
+        "id": "24b4c7eb-b5ad-4de7-bcf9-48fb7422342f",
+        "type": "group",
+        "operator": "and",
+        "conditions": [
+          {
+            "id": "92240016-40e2-4e2b-8be0-57763db501bb",
+            "type": "filter",
+            "property": "a3b6835d-c830-4393-878c-2b28215c712c",
+            "operator": "equals",
+            "value": [
+              "[[物品]]"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "2e63a5fb-78ea-44cb-8266-8bfc61249133",
+      "label": "截止日期",
+      "type": "datetime",
+      "propertyName": "截止日期",
+      "condition": {
+        "id": "79e6d11f-4d0b-4a5f-aaee-6d09df285fd5",
+        "type": "group",
+        "operator": "and",
+        "conditions": [
+          {
+            "id": "8ee66d05-a14f-46b5-b83d-f69268d9fdd2",
+            "type": "filter",
+            "property": "a3b6835d-c830-4393-878c-2b28215c712c",
+            "operator": "equals",
+            "value": [
+              "[[物品]]"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "4ce921fa-514f-46c4-bc7d-6689ee62b317",
+      "label": "物品tags",
+      "type": "property_value_suggestion",
+      "propertyName": "物品Tags",
+      "condition": {
+        "id": "6f6ae481-fe24-4779-a82e-08f4012f536e",
+        "type": "group",
+        "operator": "and",
+        "conditions": [
+          {
+            "id": "e376112e-6e0b-4034-a4b3-a8d01a7ca150",
+            "type": "filter",
+            "property": "a3b6835d-c830-4393-878c-2b28215c712c",
+            "operator": "equals",
+            "value": [
+              "[[物品]]"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "6106499f-a60d-41b6-b59f-4e169237f84a",
+      "label": "价格",
+      "type": "property_value_suggestion",
+      "propertyName": "价格",
+      "condition": {
+        "id": "bba343fe-0492-4f6f-af56-38f9a3cb005b",
+        "type": "group",
+        "operator": "and",
+        "conditions": [
+          {
+            "id": "87597ef6-9f2d-4bd6-90f6-1059800bbc99",
+            "type": "filter",
+            "property": "a3b6835d-c830-4393-878c-2b28215c712c",
+            "operator": "equals",
+            "value": [
+              "[[物品]]"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "a2b02426-4fb9-443b-878c-75fde9f4effb",
+      "label": "出售价",
+      "type": "property_value_suggestion",
+      "propertyName": "出售价",
+      "condition": {
+        "id": "536a1107-4d1c-4301-a44e-3ad1f120ec84",
+        "type": "group",
+        "operator": "and",
+        "conditions": [
+          {
+            "id": "ef332253-a8f2-484c-a892-23cf66332ba2",
+            "type": "filter",
+            "property": "a3b6835d-c830-4393-878c-2b28215c712c",
+            "operator": "equals",
+            "value": [
+              "[[物品]]"
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "actions": [
+    {
+      "type": "updateFrontmatter",
+      "targetFolder": "",
+      "fileName": "",
+      "id": "c416588e-bc0f-4128-832e-31c00170500b",
+      "propertyUpdates": [
+        {
+          "id": "86bff3c0-a8df-42bf-a379-bfd4d5a22e75",
+          "name": "类别",
+          "value": [
+            "{{@类别}}"
+          ]
+        },
+        {
+          "id": "eebf978d-849e-4df2-9fbe-ead075b6c545",
+          "name": "年份",
+          "value": [
+            "{{@年份}}"
+          ]
+        },
+        {
+          "id": "f5c908f2-b27c-4145-9c5e-745c64695a8a",
+          "name": "评分",
+          "value": [
+            "{{@评分}}"
+          ]
+        },
+        {
+          "id": "c625fcaa-a081-4ce3-b48c-536796b96dc5",
+          "name": "状态",
+          "value": [
+            "{{@状态}}"
+          ]
+        },
+        {
+          "id": "124248d4-a787-4c45-b5d9-cc6c385ee23c",
+          "name": "tagss",
+          "value": [
+            "{{@tagss}}"
+          ]
+        }
+      ],
+      "filePath": "005-电影/{{@名称}}.md",
+      "condition": {
+        "id": "14e8d8bd-294f-4391-8c37-db189693d0ba",
+        "type": "group",
+        "operator": "and",
+        "conditions": [
+          {
+            "id": "bf0fdee1-2c50-4a32-be78-9aac3457b7d5",
+            "type": "filter",
+            "property": "a3b6835d-c830-4393-878c-2b28215c712c",
+            "operator": "equals",
+            "value": [
+              "[[电影]]"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "updateFrontmatter",
+      "targetFolder": "",
+      "fileName": "",
+      "id": "13c85ea8-15f7-49f5-a11f-145326360daa",
+      "propertyUpdates": [
+        {
+          "id": "86bff3c0-a8df-42bf-a379-bfd4d5a22e75",
+          "name": "类别",
+          "value": [
+            "{{@类别}}"
+          ]
+        },
+        {
+          "id": "eebf978d-849e-4df2-9fbe-ead075b6c545",
+          "name": "年份",
+          "value": [
+            "{{@年份}}"
+          ]
+        },
+        {
+          "id": "f5c908f2-b27c-4145-9c5e-745c64695a8a",
+          "name": "评分",
+          "value": [
+            "{{@评分}}"
+          ]
+        },
+        {
+          "id": "c625fcaa-a081-4ce3-b48c-536796b96dc5",
+          "name": "状态",
+          "value": [
+            "{{@状态}}"
+          ]
+        },
+        {
+          "id": "124248d4-a787-4c45-b5d9-cc6c385ee23c",
+          "name": "tagss",
+          "value": [
+            "{{@tagss}}"
+          ]
+        }
+      ],
+      "filePath": "003-Book/{{@名称}}.md",
+      "condition": {
+        "id": "14e8d8bd-294f-4391-8c37-db189693d0ba",
+        "type": "group",
+        "operator": "and",
+        "conditions": [
+          {
+            "id": "bf0fdee1-2c50-4a32-be78-9aac3457b7d5",
+            "type": "filter",
+            "property": "a3b6835d-c830-4393-878c-2b28215c712c",
+            "operator": "equals",
+            "value": [
+              "[[书籍]]"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "updateFrontmatter",
+      "targetFolder": "",
+      "fileName": "",
+      "id": "d2d54a7e-b702-4ceb-9732-2880b62f5480",
+      "propertyUpdates": [
+        {
+          "id": "e0a0aedb-59d0-42d5-b7cb-4dda2c64dff8",
+          "name": "类别",
+          "value": [
+            "{{@类别}}"
+          ]
+        },
+        {
+          "id": "86bff3c0-a8df-42bf-a379-bfd4d5a22e75",
+          "name": "购买渠道",
+          "value": [
+            "{{@购买渠道}}"
+          ]
+        },
+        {
+          "id": "eebf978d-849e-4df2-9fbe-ead075b6c545",
+          "name": "购买时间",
+          "value": "{{@购买时间}}"
+        },
+        {
+          "id": "f5c908f2-b27c-4145-9c5e-745c64695a8a",
+          "name": "截止日期",
+          "value": "{{@截止日期}}"
+        },
+        {
+          "id": "c625fcaa-a081-4ce3-b48c-536796b96dc5",
+          "name": "物品Tags",
+          "value": [
+            "{{@物品tags}}"
+          ]
+        },
+        {
+          "id": "124248d4-a787-4c45-b5d9-cc6c385ee23c",
+          "name": "价格",
+          "value": "{{@价格}}"
+        },
+        {
+          "id": "c51aad59-60a3-4fa8-a33b-48f6284c26c9",
+          "name": "出售价",
+          "value": "{{@出售价}}"
+        }
+      ],
+      "filePath": "004-物品库/{{@名称}}.md",
+      "condition": {
+        "id": "14e8d8bd-294f-4391-8c37-db189693d0ba",
+        "type": "group",
+        "operator": "and",
+        "conditions": [
+          {
+            "id": "bf0fdee1-2c50-4a32-be78-9aac3457b7d5",
+            "type": "filter",
+            "property": "a3b6835d-c830-4393-878c-2b28215c712c",
+            "operator": "equals",
+            "value": [
+              "物品"
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "autoSubmit": false
+}

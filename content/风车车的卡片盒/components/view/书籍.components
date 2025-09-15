@@ -1,0 +1,601 @@
+{
+  "components": [
+    {
+      "id": "c6a4932c-f467-4ea3-9e6c-3d54a9589d72",
+      "type": "multi",
+      "titleAlign": "center",
+      "tabTitle": "",
+      "maxWidthRatio": -1,
+      "showBorder": true,
+      "showShadow": false,
+      "createAt": "2025-07-10T10:58:02.901Z",
+      "updateAt": "2025-07-10T10:58:02.901Z",
+      "components": [
+        {
+          "componentId": "38a4a937-3cf1-44ab-8135-f74c1c380e64",
+          "layout": {
+            "mobile": {
+              "x": 2,
+              "y": 0,
+              "w": 2,
+              "h": 5
+            },
+            "laptop": {
+              "x": 0,
+              "y": 0,
+              "w": 2,
+              "h": 5
+            }
+          }
+        },
+        {
+          "componentId": "67433492-bf1a-4da9-bcc8-29f80c010ef5",
+          "layout": {
+            "mobile": {
+              "x": 0,
+              "y": 10,
+              "w": 4,
+              "h": 15
+            },
+            "laptop": {
+              "x": 2,
+              "y": 0,
+              "w": 9,
+              "h": 13
+            }
+          }
+        },
+        {
+          "componentId": "d66b9fbb-443c-4f3e-a002-f47387321474",
+          "layout": {
+            "mobile": {
+              "x": 0,
+              "y": 0,
+              "w": 2,
+              "h": 10
+            },
+            "laptop": {
+              "x": 0,
+              "y": 5,
+              "w": 2,
+              "h": 8
+            }
+          }
+        },
+        {
+          "componentId": "b9cf0966-d2b7-4b44-a27e-7950d4faf552",
+          "layout": {
+            "mobile": {
+              "x": 2,
+              "y": 5,
+              "w": 2,
+              "h": 5
+            },
+            "laptop": {
+              "x": 0,
+              "y": 13,
+              "w": 2,
+              "h": 5
+            }
+          }
+        }
+      ],
+      "layoutType": "grid",
+      "locked": false,
+      "layoutOptions": {}
+    },
+    {
+      "id": "38a4a937-3cf1-44ab-8135-f74c1c380e64",
+      "type": "count",
+      "titleAlign": "center",
+      "tabTitle": "",
+      "maxWidthRatio": -1,
+      "showBorder": true,
+      "showShadow": false,
+      "createAt": "2025-07-10T10:58:17.921Z",
+      "updateAt": "2025-07-10T10:58:17.921Z",
+      "countValueAlign": "center",
+      "contentPrefix": "",
+      "contentSuffix": "",
+      "countType": "number",
+      "query": {
+        "valueType": "totalRecords",
+        "value": 100,
+        "filter": {
+          "id": "b4afc510-901b-4d30-93e4-0ebd660949c5",
+          "type": "group",
+          "operator": "and",
+          "conditions": [
+            {
+              "id": "eb3fbba7-91f7-42b6-b31b-3dcfe18899d1",
+              "type": "filter",
+              "operator": "contains",
+              "property": "年份",
+              "value": "[[2025]]",
+              "conditions": []
+            },
+            {
+              "id": "6033b91a-b689-4056-989c-caf36054dcb2",
+              "type": "filter",
+              "operator": "contains",
+              "property": "类别",
+              "value": "[[书籍]]",
+              "conditions": []
+            }
+          ]
+        },
+        "sort": {
+          "orders": []
+        }
+      },
+      "totalQuery": {
+        "valueType": "totalRecords",
+        "value": 1,
+        "filter": {
+          "id": "01897b2c-c520-4a56-a779-ce3157e465a5",
+          "type": "group",
+          "operator": "and",
+          "conditions": []
+        },
+        "sort": {
+          "orders": []
+        }
+      },
+      "title": "2025书籍总数"
+    },
+    {
+      "id": "67433492-bf1a-4da9-bcc8-29f80c010ef5",
+      "type": "multi",
+      "titleAlign": "center",
+      "tabTitle": "",
+      "maxWidthRatio": -1,
+      "showBorder": true,
+      "showShadow": false,
+      "createAt": "2025-07-10T13:18:33.226Z",
+      "updateAt": "2025-07-10T13:18:33.226Z",
+      "components": [
+        {
+          "componentId": "7362d30a-189c-4895-83d3-a18f4b479c07"
+        },
+        {
+          "componentId": "be44a055-7918-4296-8f4b-6ac5e4cbb1be"
+        },
+        {
+          "componentId": "64b96788-daa2-43d0-afe9-acb4cf019946"
+        }
+      ],
+      "layoutType": "tab",
+      "locked": false,
+      "layoutOptions": {}
+    },
+    {
+      "id": "64b96788-daa2-43d0-afe9-acb4cf019946",
+      "type": "dynamicDataView",
+      "titleAlign": "center",
+      "tabTitle": "已看",
+      "maxWidthRatio": -1,
+      "showBorder": false,
+      "showShadow": false,
+      "createAt": "2025-07-10T13:19:18.306Z",
+      "updateAt": "2025-07-10T13:19:18.306Z",
+      "viewType": "table",
+      "newPageNameFormat": "{{date:YYYYMMDDHHmmss}} ",
+      "properties": [
+        {
+          "id": "__componentsTitleProperty_0x7c00",
+          "name": "文件名",
+          "type": "text",
+          "isShow": true,
+          "wrap": false,
+          "options": {
+            "statisticType": "count"
+          }
+        },
+        {
+          "id": "c8f4a7a2-6db5-4aa5-ba20-0517f6b70967",
+          "name": "年份",
+          "isShow": false,
+          "type": "multiSelect",
+          "options": {}
+        },
+        {
+          "id": "fa229c97-4183-43a4-86a7-a9628009811e",
+          "name": "状态",
+          "isShow": false,
+          "type": "multiSelect",
+          "options": {
+            "width": "97"
+          }
+        },
+        {
+          "id": "f74a9458-00a5-4bb9-8533-5b5c37e5bfda",
+          "name": "tagss",
+          "isShow": true,
+          "type": "multiSelect",
+          "options": {
+            "width": "183"
+          }
+        },
+        {
+          "id": "2959b5d2-3e3e-4b0b-8124-7d428cf61072",
+          "name": "评分",
+          "isShow": true,
+          "type": "multiSelect",
+          "options": {}
+        }
+      ],
+      "templates": [],
+      "groups": [],
+      "colorfulGroups": true,
+      "viewOptions": {
+        "openPageIn": "tab",
+        "openPageAfterCreate": true,
+        "items": [],
+        "pinFiltersToMenuBar": false,
+        "showGrid": true,
+        "heightType": "auto",
+        "heightValue": 600
+      },
+      "groupStates": {
+        "sort": "nameAsc",
+        "format": "none",
+        "statics": [],
+        "orders": [],
+        "hiddens": [],
+        "collapseds": [
+          "__$uncategorizedGroup",
+          "[[2024]]"
+        ]
+      },
+      "filter": {
+        "id": "e977f019-fa09-4cee-a5f8-bb1ea3ad3060",
+        "type": "group",
+        "operator": "and",
+        "conditions": [
+          {
+            "id": "512db800-26f5-4f5c-bfed-a5407e0cebe4",
+            "type": "filter",
+            "operator": "contains",
+            "property": "类别",
+            "value": "[[书籍]]",
+            "conditions": []
+          },
+          {
+            "id": "a65c4519-8fdb-4de0-a204-f4210acd085a",
+            "type": "filter",
+            "operator": "contains",
+            "property": "状态",
+            "value": "已看",
+            "conditions": []
+          }
+        ]
+      },
+      "sort": {
+        "orders": [
+          {
+            "id": "9e75de39-b12b-4231-8804-ccfb791ce95e",
+            "property": "${file.mtime}",
+            "direction": "desc",
+            "disabled": false
+          }
+        ]
+      },
+      "groupBy": "年份"
+    },
+    {
+      "id": "d66b9fbb-443c-4f3e-a002-f47387321474",
+      "type": "chart",
+      "titleAlign": "center",
+      "tabTitle": "",
+      "maxWidthRatio": -1,
+      "showBorder": true,
+      "showShadow": false,
+      "createAt": "2025-07-10T13:24:43.663Z",
+      "updateAt": "2025-07-10T13:24:43.663Z",
+      "chartType": "doughnut",
+      "filter": {
+        "id": "557c29b8-6dad-45bf-a7fd-e9d642e042d3",
+        "type": "group",
+        "operator": "and",
+        "conditions": [
+          {
+            "id": "26538eb4-e667-4927-ad20-cb70dd989462",
+            "type": "filter",
+            "operator": "contains",
+            "property": "类别",
+            "value": "[[书籍]]",
+            "conditions": []
+          }
+        ]
+      },
+      "labelProperty": "tagss",
+      "labelFormat": "$none",
+      "valueProperty": "$file_count",
+      "valuePrecision": 0,
+      "sortField": "xAxisValue",
+      "sortOrder": "desc",
+      "maxHeight": 216,
+      "chartColorSet": "default",
+      "chartLabelPosition": "top",
+      "showDataValue": true,
+      "valueScaleStartFromZero": true,
+      "smoothLine": false,
+      "fillArea": false,
+      "options": {},
+      "title": "Tagss"
+    },
+    {
+      "id": "7362d30a-189c-4895-83d3-a18f4b479c07",
+      "type": "dynamicDataView",
+      "titleAlign": "center",
+      "tabTitle": "在看",
+      "maxWidthRatio": -1,
+      "showBorder": false,
+      "showShadow": false,
+      "createAt": "2025-07-10T15:04:11.832Z",
+      "updateAt": "2025-07-10T15:04:11.832Z",
+      "viewType": "table",
+      "newPageNameFormat": "{{date:YYYYMMDDHHmmss}} ",
+      "properties": [
+        {
+          "id": "__componentsTitleProperty_0x7c00",
+          "name": "文件名",
+          "type": "text",
+          "isShow": true,
+          "wrap": false,
+          "options": {
+            "statisticType": "count"
+          }
+        },
+        {
+          "id": "7f029631-5de0-4e5a-8947-a4ce975c6b00",
+          "name": "类别",
+          "isShow": true,
+          "type": "multiSelect",
+          "options": {
+            "width": "127"
+          }
+        },
+        {
+          "id": "1180d63c-5801-4803-b766-415ff99084f9",
+          "name": "状态",
+          "isShow": true,
+          "type": "multiSelect",
+          "options": {}
+        }
+      ],
+      "templates": [],
+      "groups": [],
+      "colorfulGroups": false,
+      "viewOptions": {
+        "openPageIn": "tab",
+        "openPageAfterCreate": true,
+        "items": [
+          "002-卡片盒/《我们何以不同：人格心理学 40 讲》.md",
+          "002-卡片盒/《双向奔赴》.md",
+          "002-卡片盒/《我们内心的冲突》.md",
+          "002-卡片盒/《改变你想法101篇文章》.md",
+          "002-卡片盒/《真想让我爱的人读读这本书》.md",
+          "002-卡片盒/《自伤自恋的精神分析》.md"
+        ],
+        "pinFiltersToMenuBar": false,
+        "showGrid": true,
+        "heightType": "auto",
+        "heightValue": 600
+      },
+      "groupStates": {
+        "sort": "nameAsc",
+        "statics": [],
+        "orders": [],
+        "hiddens": [],
+        "collapseds": []
+      },
+      "filter": {
+        "id": "dd2d08c0-43b7-464a-97ca-2aa2ba8d5d27",
+        "type": "group",
+        "operator": "and",
+        "conditions": [
+          {
+            "id": "0fbee1a3-8518-4064-bb51-52b8f7aac5f9",
+            "type": "filter",
+            "operator": "contains",
+            "property": "类别",
+            "value": "[[书籍]]",
+            "conditions": []
+          },
+          {
+            "id": "2134c179-29bb-4415-a006-98035f894b56",
+            "type": "filter",
+            "operator": "not_contains",
+            "property": "状态",
+            "value": "已看",
+            "conditions": []
+          },
+          {
+            "id": "a49c627a-4293-4afe-9a39-909312fb70f3",
+            "type": "filter",
+            "operator": "not_contains",
+            "property": "状态",
+            "value": "[[想看]]",
+            "conditions": []
+          }
+        ]
+      },
+      "sort": {
+        "orders": []
+      }
+    },
+    {
+      "id": "be44a055-7918-4296-8f4b-6ac5e4cbb1be",
+      "type": "dynamicDataView",
+      "titleAlign": "center",
+      "tabTitle": "想看",
+      "maxWidthRatio": -1,
+      "showBorder": false,
+      "showShadow": false,
+      "createAt": "2025-07-10T13:19:18.306Z",
+      "updateAt": "2025-07-10T13:19:18.306Z",
+      "viewType": "table",
+      "newPageNameFormat": "{{date:YYYYMMDDHHmmss}} ",
+      "properties": [
+        {
+          "id": "__componentsTitleProperty_0x7c00",
+          "name": "文件名",
+          "type": "text",
+          "isShow": true,
+          "wrap": false,
+          "options": {
+            "statisticType": "count"
+          }
+        },
+        {
+          "id": "8198f491-874f-4db7-8b41-bf6339723911",
+          "name": "tagss",
+          "isShow": true,
+          "type": "multiSelect",
+          "options": {
+            "width": "121"
+          }
+        },
+        {
+          "id": "caeb0ae7-bbe6-4b69-ab15-13bdaeb60bfb",
+          "name": "状态",
+          "isShow": true,
+          "type": "multiSelect",
+          "options": {
+            "width": "129"
+          }
+        }
+      ],
+      "templates": [],
+      "groups": [],
+      "colorfulGroups": false,
+      "viewOptions": {
+        "openPageIn": "tab",
+        "openPageAfterCreate": true,
+        "items": [],
+        "pinFiltersToMenuBar": false,
+        "showGrid": true,
+        "heightType": "auto",
+        "heightValue": 600
+      },
+      "groupStates": {
+        "sort": "nameAsc",
+        "statics": [],
+        "orders": [],
+        "hiddens": [],
+        "collapseds": []
+      },
+      "filter": {
+        "id": "e977f019-fa09-4cee-a5f8-bb1ea3ad3060",
+        "type": "group",
+        "operator": "and",
+        "conditions": [
+          {
+            "id": "512db800-26f5-4f5c-bfed-a5407e0cebe4",
+            "type": "filter",
+            "operator": "contains",
+            "property": "类别",
+            "value": "[[书籍]]",
+            "conditions": []
+          },
+          {
+            "id": "b13520b3-d01c-4a68-8c76-0ceb7b0c5ac4",
+            "type": "filter",
+            "operator": "contains",
+            "property": "状态",
+            "value": "[[想看]]",
+            "conditions": []
+          }
+        ]
+      },
+      "sort": {
+        "orders": [
+          {
+            "id": "9e75de39-b12b-4231-8804-ccfb791ce95e",
+            "property": "${file.mtime}",
+            "direction": "desc",
+            "disabled": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "b9cf0966-d2b7-4b44-a27e-7950d4faf552",
+      "type": "count",
+      "titleAlign": "center",
+      "tabTitle": "",
+      "maxWidthRatio": -1,
+      "showBorder": true,
+      "showShadow": false,
+      "createAt": "2025-07-10T10:58:17.921Z",
+      "updateAt": "2025-07-10T10:58:17.921Z",
+      "countValueAlign": "center",
+      "contentPrefix": "",
+      "contentSuffix": "",
+      "countType": "number",
+      "query": {
+        "valueType": "totalRecords",
+        "value": 100,
+        "filter": {
+          "id": "b4afc510-901b-4d30-93e4-0ebd660949c5",
+          "type": "group",
+          "operator": "and",
+          "conditions": [
+            {
+              "id": "eb3fbba7-91f7-42b6-b31b-3dcfe18899d1",
+              "type": "filter",
+              "operator": "contains",
+              "property": "年份",
+              "value": "[[2025]]",
+              "conditions": []
+            },
+            {
+              "id": "01f5faa3-938e-4d9d-bfcd-ea4e541489f9",
+              "type": "filter",
+              "operator": "contains",
+              "property": "状态",
+              "value": "已看",
+              "conditions": []
+            },
+            {
+              "id": "6033b91a-b689-4056-989c-caf36054dcb2",
+              "type": "filter",
+              "operator": "contains",
+              "property": "类别",
+              "value": "[[书籍]]",
+              "conditions": []
+            }
+          ]
+        },
+        "sort": {
+          "orders": []
+        }
+      },
+      "totalQuery": {
+        "valueType": "totalRecords",
+        "value": 1,
+        "filter": {
+          "id": "01897b2c-c520-4a56-a779-ce3157e465a5",
+          "type": "group",
+          "operator": "and",
+          "conditions": [
+            {
+              "id": "12f0f9c1-33df-4523-8eb7-588803cd0947",
+              "type": "filter",
+              "operator": "contains",
+              "property": "类别",
+              "value": "[[书籍]]",
+              "conditions": []
+            }
+          ]
+        },
+        "sort": {
+          "orders": []
+        }
+      },
+      "title": "2025已读"
+    }
+  ],
+  "rootComponentId": "c6a4932c-f467-4ea3-9e6c-3d54a9589d72"
+}

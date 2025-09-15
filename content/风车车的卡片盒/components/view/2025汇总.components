@@ -1,0 +1,154 @@
+{
+  "components": [
+    {
+      "id": "e0eea500-2829-483b-9887-7682580f7bd4",
+      "type": "multi",
+      "titleAlign": "center",
+      "tabTitle": "",
+      "maxWidthRatio": -1,
+      "showBorder": true,
+      "showShadow": false,
+      "createAt": "2025-07-10T15:12:39.916Z",
+      "updateAt": "2025-07-10T15:12:39.917Z",
+      "components": [
+        {
+          "componentId": "1a53fdec-9d87-4b1c-a31e-60458ec6679d",
+          "layout": {
+            "mobile": {
+              "x": 0,
+              "y": 0,
+              "w": 4,
+              "h": 30
+            },
+            "laptop": {
+              "x": 0,
+              "y": 0,
+              "w": 4,
+              "h": 4
+            }
+          }
+        }
+      ],
+      "layoutType": "grid",
+      "locked": false,
+      "layoutOptions": {}
+    },
+    {
+      "id": "1a53fdec-9d87-4b1c-a31e-60458ec6679d",
+      "type": "multi",
+      "titleAlign": "center",
+      "tabTitle": "",
+      "maxWidthRatio": -1,
+      "showBorder": true,
+      "showShadow": false,
+      "createAt": "2025-07-10T15:12:52.816Z",
+      "updateAt": "2025-07-10T15:12:52.816Z",
+      "components": [
+        {
+          "componentId": "5a109df8-3415-459e-83a8-f46514aa7f1b"
+        }
+      ],
+      "layoutType": "tab",
+      "locked": false,
+      "layoutOptions": {}
+    },
+    {
+      "id": "5a109df8-3415-459e-83a8-f46514aa7f1b",
+      "type": "dynamicDataView",
+      "titleAlign": "center",
+      "tabTitle": "2025书影集",
+      "maxWidthRatio": -1,
+      "showBorder": false,
+      "showShadow": false,
+      "createAt": "2025-07-10T15:17:00.038Z",
+      "updateAt": "2025-07-10T15:17:00.038Z",
+      "viewType": "gallary",
+      "newPageNameFormat": "{{date:YYYYMMDDHHmmss}} ",
+      "properties": [
+        {
+          "id": "__componentsTitleProperty_0x7c00",
+          "name": "文件名",
+          "type": "text",
+          "isShow": true,
+          "wrap": false,
+          "options": {
+            "width": "257"
+          }
+        },
+        {
+          "id": "ef629ba3-a13f-4230-a8c4-0be31b57cade",
+          "name": "tagss",
+          "isShow": true,
+          "type": "link",
+          "options": {}
+        },
+        {
+          "id": "aa8d39f5-3e89-48a6-903e-907f264fbdf2",
+          "name": "评分",
+          "isShow": true,
+          "type": "multiSelect",
+          "options": {}
+        }
+      ],
+      "templates": [],
+      "groups": [],
+      "colorfulGroups": false,
+      "viewOptions": {
+        "openPageIn": "tab",
+        "openPageAfterCreate": true,
+        "itemSize": "components--page-card-small",
+        "showPropertyName": true,
+        "showAllProperties": true,
+        "items": [],
+        "cover": {
+          "type": "none",
+          "source": "default",
+          "fit": "contains",
+          "layout": "components--page-card-cover-landscape",
+          "position": "top"
+        },
+        "pinFiltersToMenuBar": false,
+        "showGrid": false,
+        "heightType": "auto",
+        "heightValue": 600
+      },
+      "groupStates": {
+        "sort": "nameAsc",
+        "format": "none",
+        "statics": [],
+        "orders": [],
+        "hiddens": [],
+        "collapseds": [
+          "[[书籍]]",
+          "__$uncategorizedGroup",
+          "[[电影]]"
+        ]
+      },
+      "filter": {
+        "id": "dd2d08c0-43b7-464a-97ca-2aa2ba8d5d27",
+        "type": "group",
+        "operator": "and",
+        "conditions": [
+          {
+            "id": "138fbc03-8e22-4aba-bcb3-4054fd5a97a5",
+            "type": "filter",
+            "operator": "contains",
+            "property": "年份",
+            "value": "[[2025]]",
+            "conditions": []
+          },
+          {
+            "id": "2f23d6f8-1be4-461a-a7bd-8b65df5c5848",
+            "type": "filter",
+            "operator": "contains",
+            "property": "状态",
+            "value": "已看",
+            "conditions": []
+          }
+        ]
+      },
+      "groupBy": "类别"
+    }
+  ],
+  "rootComponentId": "e0eea500-2829-483b-9887-7682580f7bd4"
+}

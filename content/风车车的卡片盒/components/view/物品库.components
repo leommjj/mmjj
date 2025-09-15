@@ -1,0 +1,280 @@
+{
+  "components": [
+    {
+      "id": "53ecf279-2410-4462-84a9-4978d20761ce",
+      "type": "multi",
+      "titleAlign": "center",
+      "tabTitle": "",
+      "maxWidthRatio": -1,
+      "showBorder": true,
+      "showShadow": false,
+      "createAt": "2025-07-11T08:49:13.359Z",
+      "updateAt": "2025-07-11T08:49:13.359Z",
+      "components": [
+        {
+          "componentId": "8ccd184f-0cfc-4f2d-8b96-36b83009deb0",
+          "layout": {
+            "mobile": {
+              "x": 0,
+              "y": 0,
+              "w": 4,
+              "h": 30
+            },
+            "laptop": {
+              "x": 0,
+              "y": 0,
+              "w": 12,
+              "h": 23
+            }
+          }
+        }
+      ],
+      "layoutType": "grid",
+      "locked": false,
+      "layoutOptions": {}
+    },
+    {
+      "id": "8ccd184f-0cfc-4f2d-8b96-36b83009deb0",
+      "type": "multi",
+      "titleAlign": "center",
+      "tabTitle": "",
+      "maxWidthRatio": -1,
+      "showBorder": true,
+      "showShadow": false,
+      "createAt": "2025-07-11T09:06:52.009Z",
+      "updateAt": "2025-07-11T09:06:52.009Z",
+      "components": [
+        {
+          "componentId": "dc41f5e6-6b35-4494-988d-55e35a5f5016"
+        },
+        {
+          "componentId": "2d66f6e2-dae1-40d7-aee2-3db96864cbee"
+        }
+      ],
+      "layoutType": "tab",
+      "locked": false,
+      "layoutOptions": {}
+    },
+    {
+      "id": "dc41f5e6-6b35-4494-988d-55e35a5f5016",
+      "type": "dynamicDataView",
+      "titleAlign": "center",
+      "tabTitle": "我的物品",
+      "maxWidthRatio": -1,
+      "showBorder": false,
+      "showShadow": false,
+      "createAt": "2025-07-11T09:06:54.734Z",
+      "updateAt": "2025-07-11T09:06:54.734Z",
+      "viewType": "table",
+      "newPageNameFormat": "{{date:YYYYMMDDHHmmss}} ",
+      "properties": [
+        {
+          "id": "__componentsTitleProperty_0x7c00",
+          "name": "文件名",
+          "type": "text",
+          "isShow": true,
+          "wrap": false,
+          "options": {
+            "width": "121"
+          }
+        },
+        {
+          "id": "fd014a4a-c597-414a-803a-6067146037a7",
+          "name": "价格",
+          "isShow": true,
+          "type": "number",
+          "options": {
+            "width": "85",
+            "statisticType": "sum"
+          }
+        },
+        {
+          "id": "24c664c5-fb86-4a4b-92e1-7fc8e48373a6",
+          "name": "购买时间",
+          "isShow": true,
+          "type": "date",
+          "options": {
+            "width": "118"
+          }
+        },
+        {
+          "id": "ca1f4894-45bc-456c-8985-01a53bdc101f",
+          "name": "已拥有",
+          "isShow": true,
+          "type": "formula",
+          "options": {
+            "formula": "ceil(duration(prop(\"购买时间\"), now(), 'day'))",
+            "width": "107"
+          },
+          "alias": "已拥有"
+        },
+        {
+          "id": "ac33f77a-c6f5-4e96-9188-58781ba315ec",
+          "name": "日均",
+          "isShow": true,
+          "type": "formula",
+          "options": {
+            "formula": "ceil((prop(\"价格\") - prop(\"出售价\"))/ceil(duration(prop(\"购买时间\"), now(), 'day')))",
+            "width": "91",
+            "pinned": null,
+            "renderType": "html"
+          },
+          "wrap": false
+        },
+        {
+          "id": "aea5fc7a-dd22-441c-8fc8-c2c1b3ae5a6c",
+          "name": "出售价",
+          "isShow": true,
+          "type": "number",
+          "options": {
+            "width": "87"
+          }
+        },
+        {
+          "id": "6e55c8f0-e8e7-4257-b34c-9edab0cca7ee",
+          "name": "截止日期",
+          "isShow": true,
+          "type": "date",
+          "options": {
+            "width": "122"
+          }
+        },
+        {
+          "id": "49c9f63e-3681-4f11-aa67-08a252eda101",
+          "name": "类别",
+          "isShow": true,
+          "type": "multiSelect",
+          "options": {
+            "items": []
+          }
+        }
+      ],
+      "templates": [],
+      "groups": [],
+      "colorfulGroups": true,
+      "viewOptions": {
+        "openPageIn": "tab",
+        "openPageAfterCreate": true,
+        "items": [],
+        "pinFiltersToMenuBar": false,
+        "showGrid": false,
+        "heightType": "auto",
+        "heightValue": 600
+      },
+      "groupStates": {
+        "sort": "nameAsc",
+        "format": "none",
+        "statics": [],
+        "orders": [],
+        "hiddens": [],
+        "collapseds": []
+      },
+      "filter": {
+        "id": "c8fee5de-3a83-42fd-8829-ce929b5446ee",
+        "type": "group",
+        "operator": "and",
+        "conditions": [
+          {
+            "id": "23e9f555-4691-41f3-9397-e680b88ecc11",
+            "type": "filter",
+            "operator": "has_value",
+            "property": "购买时间",
+            "value": null,
+            "conditions": []
+          },
+          {
+            "id": "357faed5-27aa-4b82-b5dd-c2a77e2b9a81",
+            "type": "filter",
+            "operator": "no_value",
+            "property": "截止日期",
+            "value": null,
+            "conditions": []
+          }
+        ]
+      }
+    },
+    {
+      "id": "2d66f6e2-dae1-40d7-aee2-3db96864cbee",
+      "type": "dynamicDataView",
+      "titleAlign": "center",
+      "tabTitle": "归档&结束",
+      "maxWidthRatio": -1,
+      "showBorder": false,
+      "showShadow": false,
+      "createAt": "2025-07-11T16:43:34.641Z",
+      "updateAt": "2025-07-11T16:43:34.643Z",
+      "viewType": "table",
+      "newPageNameFormat": "{{date:YYYYMMDDHHmmss}} ",
+      "properties": [
+        {
+          "id": "__componentsTitleProperty_0x7c00",
+          "name": "文件名",
+          "type": "text",
+          "isShow": true,
+          "wrap": false,
+          "options": {}
+        },
+        {
+          "id": "9413dd2f-5d0a-4080-a054-32c9c88f0d79",
+          "name": "截止日期",
+          "isShow": true,
+          "type": "date",
+          "options": {}
+        },
+        {
+          "id": "a6bd53fa-e5dd-4be3-a49f-26d60fdc5d17",
+          "name": "日均",
+          "isShow": true,
+          "type": "formula",
+          "options": {
+            "formula": "ceil((prop(\"价格\") - prop(\"出售价\"))/ceil(duration(prop(\"购买时间\"), prop(\"截止日期\"), 'day')))"
+          }
+        },
+        {
+          "id": "e00eec17-5e0f-4f05-ae56-e7244a472881",
+          "name": "已拥有(d）",
+          "isShow": true,
+          "type": "formula",
+          "options": {
+            "formula": "ceil(duration(prop(\"购买时间\"), prop(\"截止日期\"), 'day'))"
+          }
+        }
+      ],
+      "templates": [],
+      "groups": [],
+      "colorfulGroups": false,
+      "viewOptions": {
+        "openPageIn": "tab",
+        "openPageAfterCreate": true,
+        "items": [],
+        "pinFiltersToMenuBar": false,
+        "showGrid": false,
+        "heightType": "auto",
+        "heightValue": 600
+      },
+      "groupStates": {
+        "sort": "nameAsc",
+        "statics": [],
+        "orders": [],
+        "hiddens": [],
+        "collapseds": []
+      },
+      "filter": {
+        "id": "bf8b28c6-0222-4e95-bc7f-9225c067c5cb",
+        "type": "group",
+        "operator": "and",
+        "conditions": [
+          {
+            "id": "ed2aa7f2-bf0f-41a9-88a5-a752135fe2a0",
+            "type": "filter",
+            "operator": "has_value",
+            "property": "截止日期",
+            "value": null,
+            "conditions": []
+          }
+        ]
+      }
+    }
+  ],
+  "rootComponentId": "53ecf279-2410-4462-84a9-4978d20761ce"
+}
